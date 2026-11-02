@@ -25,12 +25,12 @@
       ],
       "versions": [
         {
-          "version": "1.1",
-          "buildVersion": "3",
+          "version": "1.1.1",
+          "buildVersion": "4",
           "date": "2026-11-02",
-          "localizedDescription": "Widgets! Home screen (small/medium/large, tick tasks right on the widget) and lock screen. Note: the widget uses 1 extra App ID on free accounts.",
+          "localizedDescription": "Fixes tab labels wrapping on smaller iPhones. Includes home and lock screen widgets (the widget uses 1 extra App ID on free accounts).",
           "downloadURL": "https://azamoviich.github.io/afterhours/ipa/Nudge.ipa",
-          "size": 484148,
+          "size": 485320,
           "minOSVersion": "26.0"
         }
       ],
