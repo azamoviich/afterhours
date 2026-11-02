@@ -22,12 +22,12 @@
       ],
       "versions": [
         {
-          "version": "1.0.1",
-          "buildVersion": "2",
+          "version": "1.1",
+          "buildVersion": "3",
           "date": "2026-11-02",
-          "localizedDescription": "Typed dates always win, repeating tasks start today, Inbox renamed to Someday.",
+          "localizedDescription": "Widgets! Home screen (small/medium/large, tick tasks right on the widget) and lock screen. Note: the widget uses 1 extra App ID on free accounts.",
           "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/Nudge.ipa",
-          "size": 367466,
+          "size": 484148,
           "minOSVersion": "26.0"
         }
       ],

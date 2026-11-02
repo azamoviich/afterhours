@@ -13,8 +13,8 @@ apps = [
          localizedDescription="Type tasks like you think (\"call mom tomorrow 6pm #personal !!\"), brain-dump a whole list at once, "
                               "and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.",
          iconURL=f"{BASE}/img/nudge-icon.png", tintColor="FF5A36", category="productivity", screenshots=[f"{BASE}/img/nudge-{i}.jpg" for i in (1, 2, 3, 4)],
-         versions=[dict(version="1.0.1", buildVersion="2", date=today,
-                        localizedDescription="Typed dates always win, repeating tasks start today, Inbox renamed to Someday.",
+         versions=[dict(version="1.1", buildVersion="3", date=today,
+                        localizedDescription="Widgets! Home screen (small/medium/large, tick tasks right on the widget) and lock screen. Note: the widget uses 1 extra App ID on free accounts.",
                         downloadURL=f"{BASE}/ipa/Nudge.ipa", size=size("Nudge.ipa"), minOSVersion="26.0")],
          appPermissions=dict(entitlements=[], privacy={})),
     dict(name="Benefit Motors", bundleIdentifier="uz.benefitmotors.app", developerName="Benefit Motors",
