@@ -1,8 +1,11 @@
 {
-  "name": "Plagueson Apps",
-  "identifier": "uz.plagueson.source",
-  "subtitle": "Apps by Plagueson",
-  "iconURL": "https://azamoviich.github.io/plagueson-apps/img/nudge-icon.png",
+  "name": "afterhours",
+  "identifier": "uz.plagueson.afterhours",
+  "subtitle": "Apps I build after hours",
+  "description": "Small, polished iOS apps made in my free time.",
+  "website": "https://azamoviich.github.io/afterhours",
+  "headerURL": "https://azamoviich.github.io/afterhours/img/banner.png",
+  "iconURL": "https://azamoviich.github.io/afterhours/img/nudge-icon.png",
   "tintColor": "FF5A36",
   "apps": [
     {
@@ -11,14 +14,14 @@
       "developerName": "Plagueson",
       "subtitle": "A demo to-do app for people who forget.",
       "localizedDescription": "Type tasks like you think (\"call mom tomorrow 6pm #personal !!\"), brain-dump a whole list at once, and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.",
-      "iconURL": "https://azamoviich.github.io/plagueson-apps/img/nudge-icon.png",
+      "iconURL": "https://azamoviich.github.io/afterhours/img/nudge-icon.png",
       "tintColor": "FF5A36",
       "category": "productivity",
       "screenshots": [
-        "https://azamoviich.github.io/plagueson-apps/img/nudge-1.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/nudge-2.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/nudge-3.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/nudge-4.jpg"
+        "https://azamoviich.github.io/afterhours/img/nudge-1.jpg",
+        "https://azamoviich.github.io/afterhours/img/nudge-2.jpg",
+        "https://azamoviich.github.io/afterhours/img/nudge-3.jpg",
+        "https://azamoviich.github.io/afterhours/img/nudge-4.jpg"
       ],
       "versions": [
         {
@@ -26,7 +29,7 @@
           "buildVersion": "3",
           "date": "2026-11-02",
           "localizedDescription": "Widgets! Home screen (small/medium/large, tick tasks right on the widget) and lock screen. Note: the widget uses 1 extra App ID on free accounts.",
-          "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/Nudge.ipa",
+          "downloadURL": "https://azamoviich.github.io/afterhours/ipa/Nudge.ipa",
           "size": 484148,
           "minOSVersion": "26.0"
         }
@@ -42,14 +45,14 @@
       "developerName": "Benefit Motors",
       "subtitle": "Demo car dealership app.",
       "localizedDescription": "Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.",
-      "iconURL": "https://azamoviich.github.io/plagueson-apps/img/benefit-icon.png",
+      "iconURL": "https://azamoviich.github.io/afterhours/img/benefit-icon.png",
       "tintColor": "111111",
       "category": "lifestyle",
       "screenshots": [
-        "https://azamoviich.github.io/plagueson-apps/img/benefit-1.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/benefit-2.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/benefit-3.jpg",
-        "https://azamoviich.github.io/plagueson-apps/img/benefit-4.jpg"
+        "https://azamoviich.github.io/afterhours/img/benefit-1.jpg",
+        "https://azamoviich.github.io/afterhours/img/benefit-2.jpg",
+        "https://azamoviich.github.io/afterhours/img/benefit-3.jpg",
+        "https://azamoviich.github.io/afterhours/img/benefit-4.jpg"
       ],
       "versions": [
         {
@@ -57,7 +60,7 @@
           "buildVersion": "1",
           "date": "2026-11-02",
           "localizedDescription": "Demo release.",
-          "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/BenefitMotors.ipa",
+          "downloadURL": "https://azamoviich.github.io/afterhours/ipa/BenefitMotors.ipa",
           "size": 8068458,
           "minOSVersion": "26.0"
         }

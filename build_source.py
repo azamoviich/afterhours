@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Regenerates apps.json (AltStore/SideStore source format).
-Usage: python3 build_source.py https://<user>.github.io/<repo>"""
+Usage: python3 build_source.py https://azamoviich.github.io/afterhours"""
 import json, os, sys, datetime
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://REPLACE_ME").rstrip("/")
 here = os.path.dirname(os.path.abspath(__file__))
@@ -26,7 +26,9 @@ apps = [
                         downloadURL=f"{BASE}/ipa/BenefitMotors.ipa", size=size("BenefitMotors.ipa"), minOSVersion="26.0")],
          appPermissions=dict(entitlements=[], privacy={})),
 ]
-source = dict(name="Plagueson Apps", identifier="uz.plagueson.source", subtitle="Apps by Plagueson",
+source = dict(name="afterhours", identifier="uz.plagueson.afterhours", subtitle="Apps I build after hours",
+              description="Small, polished iOS apps made in my free time.", website="https://azamoviich.github.io/afterhours",
+              headerURL=f"{BASE}/img/banner.png",
               iconURL=f"{BASE}/img/nudge-icon.png", tintColor="FF5A36", apps=apps, news=[])
 json.dump(source, open(os.path.join(here, "apps.json"), "w"), indent=2, ensure_ascii=False)
 print(f"apps.json written for {BASE}")

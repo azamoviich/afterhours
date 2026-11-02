@@ -1,35 +1,255 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Plagueson Apps</title><style>
-:root{color-scheme:light dark;--bg:#f6f3ee;--card:#fff;--ink:#1a1714;--mut:#1a171480;--acc:#ff5a36}
-@media(prefers-color-scheme:dark){:root{--bg:#11100f;--card:#1c1b19;--ink:#f2efea;--mut:#f2efea80}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,system-ui,sans-serif}
-main{max-width:880px;margin:auto;padding:56px 20px 80px}
-h1{font:600 44px/1.05 ui-serif,Georgia,serif;letter-spacing:-.02em;margin:0 0 10px}
-.lead{color:var(--mut);margin:0 0 26px;max-width:520px}
-.cta{display:inline-flex;gap:10px;align-items:center;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:999px}
-.cta:active{transform:scale(.97)}
-.url{display:block;margin-top:12px;font:13px ui-monospace,monospace;color:var(--mut);word-break:break-all}
-.app{background:var(--card);border-radius:28px;padding:22px;margin-top:28px;border:1px solid #8881}
-.app header{display:flex;gap:14px;align-items:center}.app h2{margin:0;font-size:20px}.app header p{margin:0;color:var(--mut);font-size:14px}
-.icon{width:64px;height:64px;border-radius:15px}
-.dl{margin-left:auto;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;background:#8882}
-.desc{color:var(--mut);font-size:15px}
-.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-.shots img{height:420px;border-radius:22px;scroll-snap-align:start;border:1px solid #8882}
-footer{margin-top:40px;color:var(--mut);font-size:13px}
-</style></head><body><main>
-<h1>Plagueson Apps</h1>
-<p class="lead">Little demo apps I make in my free time. Install with SideStore using your own Apple ID.</p>
-<a class="cta" href="sidestore://source?url=https://azamoviich.github.io/plagueson-apps/apps.json">Add to SideStore ↗</a>
-<span class="url">https://azamoviich.github.io/plagueson-apps/apps.json</span>
-<section class="app">
-  <header><img class="icon" src="img/nudge-icon.png"><div><h2>Nudge</h2><p>A demo to-do app for people who forget.</p></div>
-  <a class="dl" href="ipa/Nudge.ipa">IPA</a></header>
-  <p class="desc">Type tasks like you think ("call mom tomorrow 6pm #personal !!"), brain-dump a whole list at once, and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.</p>
-  <div class="shots"><img src="img/nudge-1.jpg" loading="lazy"><img src="img/nudge-2.jpg" loading="lazy"><img src="img/nudge-3.jpg" loading="lazy"><img src="img/nudge-4.jpg" loading="lazy"></div></section><section class="app">
-  <header><img class="icon" src="img/benefit-icon.png"><div><h2>Benefit Motors</h2><p>Demo car dealership app.</p></div>
-  <a class="dl" href="ipa/BenefitMotors.ipa">IPA</a></header>
-  <p class="desc">Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.</p>
-  <div class="shots"><img src="img/benefit-1.jpg" loading="lazy"><img src="img/benefit-2.jpg" loading="lazy"><img src="img/benefit-3.jpg" loading="lazy"><img src="img/benefit-4.jpg" loading="lazy"></div></section>
-<footer>New to SideStore? Setup guide: <a href="https://github.com/azamoviich/plagueson-apps#readme">README</a> · Free Apple IDs: 3 apps max, refresh every 7 days.</footer>
-</main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>afterhours — apps I build after hours</title>
+<meta name="description" content="Small, polished iOS apps made in my free time. Install free with SideStore.">
+<meta property="og:title" content="afterhours">
+<meta property="og:description" content="Small, polished iOS apps made in my free time.">
+<meta property="og:image" content="https://azamoviich.github.io/afterhours/img/banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f3ee">
+<link rel="icon" href="img/nudge-icon.png">
+<link rel="apple-touch-icon" href="img/nudge-icon.png">
+<style>
+:root {
+  --paper: #f6f3ee; --card: #fffdf9; --ink: #1a1714; --mut: rgba(26,23,20,.56); --faint: rgba(26,23,20,.08);
+  --tomato: #ff5a36; --ease: cubic-bezier(.32,.72,0,1);
+  --serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #11100f; --card: #1a1917; --ink: #f2efea; --mut: rgba(242,239,234,.56); --faint: rgba(255,255,255,.08); }
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font: 17px/1.55 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+/* Prevent Safari auto-zoom on input focus */
+input, textarea, select { font-size: max(16px, 1em); }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* Floating island nav */
+nav { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 10;
+  display: flex; align-items: center; gap: 4px; padding: 6px; border-radius: 999px;
+  background: color-mix(in srgb, var(--paper) 72%, transparent); backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid var(--faint); box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+nav a { text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--mut); transition: color .3s var(--ease), background .3s var(--ease); }
+nav a:hover { color: var(--ink); background: var(--faint); }
+nav .logo { font: 600 17px var(--serif); color: var(--ink); padding: 8px 14px 8px 12px; }
+@media (max-width: 560px) { nav a:not(.logo):not(.get) { display: none; } }
+nav .get { background: var(--ink); color: var(--paper); }
+nav .get:hover { background: var(--ink); color: var(--paper); opacity: .85; }
+
+/* Hero */
+.hero { min-height: 100dvh; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 40px; padding-top: 110px; padding-bottom: 60px; position: relative; }
+.hero::before { content: ""; position: absolute; width: 780px; height: 780px; right: -260px; top: -200px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,120,80,.32), transparent); z-index: -1; pointer-events: none; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--tomato);
+  padding: 6px 12px; border-radius: 999px; background: rgba(255,90,54,.1); }
+.eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: var(--tomato); }
+h1 { font: 600 clamp(64px, 10vw, 128px)/.92 var(--serif); letter-spacing: -.035em; margin: 22px 0 22px; }
+h1 em { font-style: italic; font-weight: 500; color: var(--tomato); }
+.lead { font-size: clamp(18px, 2vw, 21px); color: var(--mut); max-width: 460px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.btn { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; font-weight: 600; font-size: 16px;
+  padding: 7px 7px 7px 24px; border-radius: 999px; transition: transform .5s var(--ease), opacity .3s; border: 0; cursor: pointer; font-family: inherit; }
+.btn:active { transform: scale(.97); }
+.btn .i { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; transition: transform .5s var(--ease); }
+.btn:hover .i { transform: translate(2px,-1px) scale(1.06); }
+.btn.dark { background: var(--ink); color: var(--paper); }
+.btn.dark .i { background: var(--tomato); color: #fff; }
+.btn.ghost { background: var(--card); color: var(--ink); border: 1px solid var(--faint); }
+.btn.ghost .i { background: var(--faint); }
+.src { margin-top: 18px; font: 13px ui-monospace, "SF Mono", monospace; color: var(--mut); }
+.phones { position: relative; height: 640px; }
+.phones img { position: absolute; width: 330px; filter: drop-shadow(0 30px 50px rgba(0,0,0,.18)); transition: transform 1.2s var(--ease); }
+.phones .p1 { left: 0; top: 20px; transform: rotate(-6deg); z-index: 2; }
+.phones .p2 { right: 0; top: 70px; transform: rotate(5deg); }
+.phones:hover .p1 { transform: rotate(-8deg) translateX(-14px); }
+.phones:hover .p2 { transform: rotate(7deg) translateX(14px); }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 120px; }
+  .phones { height: 480px; } .phones img { width: 240px; } .phones .p1 { left: 4%; } .phones .p2 { right: 4%; }
+}
+
+/* Sections */
+section.app { padding: 120px 0; }
+.app-head { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.app-head img { width: 72px; height: 72px; border-radius: 17px; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+h2 { font: 600 clamp(40px, 6vw, 68px)/1 var(--serif); letter-spacing: -.03em; }
+.tag { color: var(--mut); font-size: 19px; max-width: 560px; margin-top: 10px; }
+.reel { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 40px 24px 10px; margin: 0 -24px; scrollbar-width: none; }
+.reel::-webkit-scrollbar { display: none; }
+.reel img { width: 280px; flex: none; scroll-snap-align: center; margin: 0 -26px; transition: transform .8s var(--ease); }
+.reel img:hover { transform: translateY(-8px); }
+
+/* Bento */
+.bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 56px; }
+.cell { grid-column: span 2; background: var(--faint); border-radius: 30px; padding: 6px; }
+.cell > div { height: 100%; background: var(--card); border-radius: 24px; padding: 26px; box-shadow: inset 0 1px 0 rgba(255,255,255,.4); }
+.cell.wide { grid-column: span 4; } .cell.tall { grid-row: span 2; }
+.cell h3 { font: 600 22px/1.2 var(--serif); margin: 14px 0 6px; letter-spacing: -.01em; }
+.cell p { color: var(--mut); font-size: 15px; }
+.cell .ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,90,54,.12); font-size: 19px; }
+code.k { font: 14px ui-monospace, "SF Mono", monospace; background: var(--faint); padding: 3px 8px; border-radius: 8px; display: inline-block; margin-top: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.chips span { font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; }
+.widgets-img { border-radius: 20px; margin-top: 18px; }
+@media (max-width: 860px) { .bento { grid-template-columns: 1fr; } .cell, .cell.wide { grid-column: span 1; } .cell.tall { grid-row: auto; } }
+
+/* Benefit: dark world */
+.dark-world { background: #050506; color: #f4f4f5; border-radius: 48px; margin: 0 12px; }
+.dark-world .tag, .dark-world .cell p { color: rgba(255,255,255,.55); }
+.dark-world .cell { background: rgba(255,255,255,.05); }
+.dark-world .cell > div { background: #111113; box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+.dark-world .cell .ico { background: rgba(255,255,255,.08); }
+.note { margin-top: 28px; font-size: 14px; color: rgba(255,255,255,.45); }
+.wide-type h2 { font-family: var(--sans); font-weight: 700; font-stretch: expanded; letter-spacing: -.02em; }
+
+/* Install */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; counter-reset: s; }
+.step { background: var(--card); border: 1px solid var(--faint); border-radius: 28px; padding: 28px; }
+.step b { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--faint); font: 600 14px var(--serif); color: var(--mut); margin-bottom: 18px; }
+.step h3 { font: 600 21px var(--serif); margin-bottom: 6px; }
+.step p { color: var(--mut); font-size: 15px; }
+@media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+.copy { margin-top: 14px; display: inline-flex; gap: 10px; align-items: center; background: var(--faint); border: 0; border-radius: 12px;
+  padding: 10px 14px; font: 13px ui-monospace, "SF Mono", monospace; color: var(--ink); cursor: pointer; text-align: left; word-break: break-all; }
+.copy:active { transform: scale(.98); }
+
+/* FAQ */
+details { border-bottom: 1px solid var(--faint); padding: 22px 0; }
+summary { cursor: pointer; list-style: none; font: 600 20px var(--serif); display: flex; justify-content: space-between; gap: 20px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font: 400 26px var(--sans); color: var(--tomato); transition: transform .4s var(--ease); line-height: 1; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--mut); margin-top: 10px; max-width: 680px; }
+footer { padding: 80px 0 60px; text-align: center; color: var(--mut); font-size: 14px; }
+footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing: -.04em; color: var(--faint); margin-bottom: 24px; user-select: none; }
+
+/* Preview mode for screenshots: ?static */
+.static .hero { min-height: auto; }
+.static .r { opacity: 1; transform: none; filter: none; transition: none; }
+
+/* Reveal */
+.r { opacity: 0; transform: translateY(40px); filter: blur(8px); transition: opacity 1s var(--ease), transform 1s var(--ease), filter 1s var(--ease); }
+.r.in { opacity: 1; transform: none; filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .r { opacity: 1; transform: none; filter: none; transition: none; }
+  .phones img, .btn, .reel img { transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">afterhours</a>
+  <a href="#nudge">Nudge</a>
+  <a href="#benefit">Benefit Motors</a>
+  <a href="#install">Install</a>
+  <a class="get" href="sidestore://source?url=https://azamoviich.github.io/afterhours/apps.json">Get</a>
+</nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="eyebrow r"><i></i>Apps I build after hours</span>
+    <h1 class="r">after<em>hours</em></h1>
+    <p class="lead r">Small, polished iOS apps I make in my free time. Native SwiftUI. No accounts, no tracking, nothing to buy.</p>
+    <div class="ctas r">
+      <a class="btn dark" href="sidestore://source?url=https://azamoviich.github.io/afterhours/apps.json">Add to SideStore
+        <span class="i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 11L11 3M5 3h6v6"/></svg></span></a>
+      <a class="btn ghost" href="#install">How to install <span class="i">↓</span></a>
+    </div>
+    <p class="src r">2 apps · iOS 26+ · free</p>
+  </div>
+  <div class="phones r">
+    <img class="p2" src="img/frames/benefit-1.png" alt="Benefit Motors">
+    <img class="p1" src="img/frames/nudge-1.png" alt="Nudge">
+  </div>
+</header>
+
+<section class="app" id="nudge">
+  <div class="wrap">
+    <div class="app-head r"><img src="img/nudge-icon.png" alt=""><span class="eyebrow">Productivity</span></div>
+    <h2 class="r">Nudge</h2>
+    <p class="tag r">A to-do app for people who forget. I kept dropping things, so I built one that keeps reminding me until they're done.</p>
+    <div class="reel r">
+      <img src="img/frames/nudge-1.png" alt="Today"><img src="img/frames/nudge-2.png" alt="Quick add">
+      <img src="img/frames/nudge-3.png" alt="Upcoming"><img src="img/frames/nudge-4.png" alt="Dark mode">
+    </div>
+    <div class="bento">
+      <div class="cell wide r"><div><span class="ico">✍️</span><h3>Type like you think</h3>
+        <p>Dates, times, lists and priority are picked up as you type, and you see what it understood before you save.</p>
+        <code class="k">call mom tomorrow 6pm #personal !!</code>
+        <div class="chips"><span style="background:#ff5a36;color:#fff">Tomorrow 6:00 PM</span><span style="background:rgba(92,133,250,.15);color:#5c85fa">Personal</span><span style="background:rgba(250,168,51,.15);color:#d4891f">Medium</span></div></div></div>
+      <div class="cell tall r"><div><span class="ico">🧩</span><h3>Widgets</h3><p>Tick tasks right on the home screen. Lock screen too.</p>
+        <img class="widgets-img" src="img/widgets.jpg" alt="Nudge widgets"></div></div>
+      <div class="cell r"><div><span class="ico">🔔</span><h3>Nag mode</h3><p>Re-reminds at 10, 30, 60 and 120 minutes until you tick it.</p></div></div>
+      <div class="cell r"><div><span class="ico">🧠</span><h3>Brain dump</h3><p>Paste a messy list. Every line becomes a task.</p></div></div>
+      <div class="cell r"><div><span class="ico">☀️</span><h3>Morning digest</h3><p>8:30 summary of what today holds.</p></div></div>
+      <div class="cell r"><div><span class="ico">⚡</span><h3>Act from the alert</h3><p>Done, in 1 hour, or tomorrow, without opening the app.</p></div></div>
+      <div class="cell wide r"><div><span class="ico">🔁</span><h3>Repeats that don't pile up</h3><p>Write <code class="k" style="margin:0">daily</code>, <code class="k" style="margin:0">weekdays</code> or <code class="k" style="margin:0">monthly</code>. Tick it and it rolls to the next day, even if you skipped a few.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="app dark-world" id="benefit">
+  <div class="wrap wide-type">
+    <div class="app-head r"><img src="img/benefit-icon.png" alt=""><span class="eyebrow" style="background:rgba(255,255,255,.08);color:#fff"><i style="background:#fff"></i>Concept</span></div>
+    <h2 class="r">Benefit Motors</h2>
+    <p class="tag r">What a premium car dealership app could feel like. OLED black, Liquid Glass, spring physics and haptics everywhere.</p>
+    <div class="reel r">
+      <img src="img/frames/benefit-1.png" alt="Showroom"><img src="img/frames/benefit-2.png" alt="Car page">
+      <img src="img/frames/benefit-3.png" alt="Inventory"><img src="img/frames/benefit-4.png" alt="Sell">
+    </div>
+    <div class="bento">
+      <div class="cell r"><div><span class="ico">🏁</span><h3>Showroom</h3><p>Featured carousel, body types, brands, price drops.</p></div></div>
+      <div class="cell r"><div><span class="ico">🧮</span><h3>Live financing</h3><p>Drag the down payment, pick a term, watch the monthly update.</p></div></div>
+      <div class="cell r"><div><span class="ico">📅</span><h3>Test drives</h3><p>Pick a day and slot, get a confirmation with a haptic tap.</p></div></div>
+    </div>
+    <p class="note r">Demo only. Not a real store; every car, price and person in it is made up.</p>
+  </div>
+</section>
+
+<section class="app" id="install">
+  <div class="wrap">
+    <span class="eyebrow r"><i></i>Install</span>
+    <h2 class="r" style="margin-top:18px">Three steps.</h2>
+    <p class="tag r">SideStore installs apps with your own free Apple ID and refreshes them on your phone.</p>
+    <div class="steps">
+      <div class="step r"><b>01</b><h3>Get SideStore</h3><p>Follow the guide at <a href="https://docs.sidestore.io">docs.sidestore.io</a>. It needs a computer once, about 15 minutes.</p></div>
+      <div class="step r"><b>02</b><h3>Add this source</h3><p>Tap <a href="sidestore://source?url=https://azamoviich.github.io/afterhours/apps.json">Add to SideStore</a> on your iPhone, or paste the link:</p>
+        <button class="copy" id="copy" type="button">https://azamoviich.github.io/afterhours/apps.json</button></div>
+      <div class="step r"><b>03</b><h3>Install &amp; refresh</h3><p>Tap an app to install. Open SideStore every few days and tap <b>Refresh All</b>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:40px">
+  <h2 class="r" style="font-size:44px;margin-bottom:12px">FAQ</h2>
+  <details class="r"><summary>Why does an app stop opening after a week?</summary><p>Free Apple IDs sign apps for 7 days. Refresh in SideStore every few days. Your data stays.</p></details>
+  <details class="r"><summary>"Maximum App ID limit reached"?</summary><p>Free Apple IDs get 10 App IDs per 7 days, and extensions like Nudge's widget count too. Wait for the week to roll over.</p></details>
+  <details class="r"><summary>How many apps can I install?</summary><p>3 at once on a free Apple ID, and SideStore itself is one of them.</p></details>
+  <details class="r"><summary>Is it safe?</summary><p>Everything runs on your phone: no accounts, no analytics, no tracking. SideStore re-signs the apps with your own Apple ID.</p></details>
+</section>
+
+<footer>
+  <div class="big">afterhours</div>
+  <p>Made after hours in Tashkent 🇺🇿 · <a href="https://github.com/azamoviich/afterhours">GitHub</a></p>
+</footer>
+
+<script>
+if (location.search.includes('static')) document.documentElement.classList.add('static');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.r').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+const c = document.getElementById('copy');
+c.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(c.textContent.trim()); const t = c.textContent; c.textContent = 'Copied ✓'; setTimeout(() => c.textContent = t, 1400); } catch {}
+});
+</script>
+</body>
+</html>
