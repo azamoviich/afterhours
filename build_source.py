@@ -17,6 +17,17 @@ apps = [
                         localizedDescription="Widgets! Home screen (small/medium/large, tick tasks right on the widget) and lock screen. Note: the widget uses 1 extra App ID on free accounts.",
                         downloadURL=f"{BASE}/ipa/Nudge.ipa", size=size("Nudge.ipa"), minOSVersion="26.0")],
          appPermissions=dict(entitlements=[], privacy={})),
+    dict(name="Blare", bundleIdentifier="uz.plagueson.blare", developerName="Plagueson",
+         subtitle="A loud alarm that actually wakes you.",
+         localizedDescription="Real system alarms (AlarmKit) that ring through Silent and Focus, with 5 brutally loud sounds. "
+                              "Wake-up missions (math, shake, type) and No Escape mode: hit Stop without finishing and it rings again every minute. "
+                              "Just a demo app I made in my free time.",
+         iconURL=f"{BASE}/img/blare-icon.png", tintColor="FF3B1F", category="utilities",
+         screenshots=[f"{BASE}/img/blare-{i}.jpg" for i in (1, 2, 3, 4)],
+         versions=[dict(version="1.0", buildVersion="1", date=today, localizedDescription="First release.",
+                        downloadURL=f"{BASE}/ipa/Blare.ipa", size=size("Blare.ipa"), minOSVersion="26.0")],
+         appPermissions=dict(entitlements=[], privacy={"NSAlarmKitUsageDescription": "Schedules real alarms that ring on silent.",
+                                                      "NSMotionUsageDescription": "Counts shakes for the shake mission."})),
     dict(name="Benefit Motors", bundleIdentifier="uz.benefitmotors.app", developerName="Benefit Motors",
          subtitle="Demo car dealership app.",
          localizedDescription="Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.",

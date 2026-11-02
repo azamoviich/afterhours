@@ -109,6 +109,16 @@ code.k { font: 14px ui-monospace, "SF Mono", monospace; background: var(--faint)
 .note { margin-top: 28px; font-size: 14px; color: rgba(255,255,255,.45); }
 .wide-type h2 { font-family: var(--sans); font-weight: 700; font-stretch: expanded; letter-spacing: -.02em; }
 
+/* Blare: emergency world */
+.blare-world { background: #050505; color: #f4f4f5; border-radius: 48px; margin: 0 12px 12px; position: relative; overflow: hidden; }
+.blare-world::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 10px;
+  background: repeating-linear-gradient(-45deg, #ff3b1f 0 14px, transparent 14px 28px); }
+.blare-world .tag, .blare-world .cell p { color: rgba(255,255,255,.55); }
+.blare-world .cell { background: rgba(255,59,31,.08); }
+.blare-world .cell > div { background: #0f0f0f; box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+.blare-world .cell .ico { background: rgba(255,59,31,.16); }
+.blare-title { font-family: var(--sans); font-weight: 900; font-stretch: condensed; letter-spacing: .04em; color: #fff; }
+
 /* Install */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; counter-reset: s; }
 .step { background: var(--card); border: 1px solid var(--faint); border-radius: 28px; padding: 28px; }
@@ -149,6 +159,7 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
 <nav>
   <a class="logo" href="#">afterhours</a>
   <a href="#nudge">Nudge</a>
+  <a href="#blare">Blare</a>
   <a href="#benefit">Benefit Motors</a>
   <a href="#install">Install</a>
   <a class="get" href="sidestore://source?url=https://azamoviich.github.io/afterhours/apps.json">Get</a>
@@ -164,7 +175,7 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
         <span class="i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 11L11 3M5 3h6v6"/></svg></span></a>
       <a class="btn ghost" href="#install">How to install <span class="i">↓</span></a>
     </div>
-    <p class="src r">2 apps · iOS 26+ · free</p>
+    <p class="src r">3 apps · iOS 26+ · free</p>
   </div>
   <div class="phones r">
     <img class="p2" src="img/frames/benefit-1.png" alt="Benefit Motors">
@@ -193,6 +204,25 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
       <div class="cell r"><div><span class="ico">☀️</span><h3>Morning digest</h3><p>8:30 summary of what today holds.</p></div></div>
       <div class="cell r"><div><span class="ico">⚡</span><h3>Act from the alert</h3><p>Done, in 1 hour, or tomorrow, without opening the app.</p></div></div>
       <div class="cell wide r"><div><span class="ico">🔁</span><h3>Repeats that don't pile up</h3><p>Write <code class="k" style="margin:0">daily</code>, <code class="k" style="margin:0">weekdays</code> or <code class="k" style="margin:0">monthly</code>. Tick it and it rolls to the next day, even if you skipped a few.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="app blare-world" id="blare">
+  <div class="wrap">
+    <div class="app-head r"><img src="img/blare-icon.png" alt=""><span class="eyebrow" style="background:rgba(255,59,31,.15);color:#ff3b1f"><i style="background:#ff3b1f"></i>Alarm</span></div>
+    <h2 class="r blare-title">BLARE</h2>
+    <p class="tag r">A loud alarm that actually wakes you. The stock alarm kept failing me, so this one is brutal on purpose.</p>
+    <div class="reel r">
+      <img src="img/frames/blare-1.png" alt="Alarms"><img src="img/frames/blare-2.png" alt="Edit alarm">
+      <img src="img/frames/blare-3.png" alt="Math mission"><img src="img/frames/blare-4.png" alt="Shake mission">
+    </div>
+    <div class="bento">
+      <div class="cell wide r"><div><span class="ico">🚨</span><h3>Real system alarms</h3><p>Built on Apple's AlarmKit. Rings through Silent mode and Focus, full screen on the lock screen, even when the app is closed.</p></div></div>
+      <div class="cell r"><div><span class="ico">🔊</span><h3>5 brutal sounds</h3><p>Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Tuned to 2–4 kHz.</p></div></div>
+      <div class="cell r"><div><span class="ico">🧮</span><h3>Missions</h3><p>Math, shake 40 times, or type a sentence to turn it off.</p></div></div>
+      <div class="cell r"><div><span class="ico">🔒</span><h3>No escape</h3><p>Stop it without the mission and it rings again every minute.</p></div></div>
+      <div class="cell r"><div><span class="ico">🔦</span><h3>Full assault</h3><p>Volume to 100%, flashlight strobe, red screen, nonstop haptics.</p></div></div>
     </div>
   </div>
 </section>

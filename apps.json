@@ -40,6 +40,40 @@
       }
     },
     {
+      "name": "Blare",
+      "bundleIdentifier": "uz.plagueson.blare",
+      "developerName": "Plagueson",
+      "subtitle": "A loud alarm that actually wakes you.",
+      "localizedDescription": "Real system alarms (AlarmKit) that ring through Silent and Focus, with 5 brutally loud sounds. Wake-up missions (math, shake, type) and No Escape mode: hit Stop without finishing and it rings again every minute. Just a demo app I made in my free time.",
+      "iconURL": "https://azamoviich.github.io/afterhours/img/blare-icon.png",
+      "tintColor": "FF3B1F",
+      "category": "utilities",
+      "screenshots": [
+        "https://azamoviich.github.io/afterhours/img/blare-1.jpg",
+        "https://azamoviich.github.io/afterhours/img/blare-2.jpg",
+        "https://azamoviich.github.io/afterhours/img/blare-3.jpg",
+        "https://azamoviich.github.io/afterhours/img/blare-4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-11-02",
+          "localizedDescription": "First release.",
+          "downloadURL": "https://azamoviich.github.io/afterhours/ipa/Blare.ipa",
+          "size": 7120385,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAlarmKitUsageDescription": "Schedules real alarms that ring on silent.",
+          "NSMotionUsageDescription": "Counts shakes for the shake mission."
+        }
+      }
+    },
+    {
       "name": "Benefit Motors",
       "bundleIdentifier": "uz.benefitmotors.app",
       "developerName": "Benefit Motors",

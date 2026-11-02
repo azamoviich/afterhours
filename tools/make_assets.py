@@ -29,12 +29,12 @@ def phone(path, w=420):
     canvas.alpha_composite(body, (pad, pad)); return canvas
 
 framed = {}
-for app, names in {'nudge': ['m1', 'm2', 'm3', 'm4'], 'benefit': ['b1', 'b2', 'b3', 'b4']}.items():
+for app, names in {'nudge': ['m1', 'm2', 'm3', 'm4'], 'benefit': ['b1', 'b2', 'b3', 'b4'], 'blare': ['x1', 'x2', 'x3', 'x4']}.items():
     framed[app] = [phone(f'{SRC}/{n}.png') for n in names]
     for i, f in enumerate(framed[app], 1):
         f.save(f'img/frames/{app}-{i}.png', optimize=True)
 
-for app, bg in [('nudge', PAPER), ('benefit', (10, 10, 11))]:
+for app, bg in [('nudge', PAPER), ('benefit', (10, 10, 11)), ('blare', (5, 5, 5))]:
     fs = framed[app]; W = sum(f.width for f in fs) - 140 * 3
     strip = Image.new('RGBA', (W, fs[0].height), bg + (255,)); x = 0
     for f in fs: strip.alpha_composite(f, (x, 0)); x += f.width - 140
@@ -48,7 +48,7 @@ b = Image.composite(Image.new('RGB', (W, H), (255, 176, 146)), b, g.filter(Image
 d = ImageDraw.Draw(b)
 d.text((84, 96), 'APPS I BUILD AFTER HOURS', font=font(SANS, 20), fill=TOMATO)
 d.text((76, 124), 'afterhours', font=font(SERIF, 128), fill=INK)
-d.text((84, 300), 'Small, polished iOS apps', font=font(SANS, 32), fill=INK)
+d.text((84, 300), '3 small, polished iOS apps', font=font(SANS, 32), fill=INK)
 d.text((84, 342), 'made in my free time.', font=font(SANS, 32), fill=(130, 122, 114))
 f = font(SANS, 24); label = 'Add to SideStore'; tw = d.textlength(label, font=f)
 x0, y0, h = 84, 430, 64; w = int(tw) + 32 + 56 + 10
@@ -61,7 +61,7 @@ bb = b.convert('RGBA')
 p2 = framed['benefit'][0].copy(); p2.thumbnail((320, 700)); p2 = p2.rotate(6, resample=Image.BICUBIC, expand=True)
 p1 = framed['nudge'][0].copy(); p1.thumbnail((320, 700)); p1 = p1.rotate(-5, resample=Image.BICUBIC, expand=True)
 bb.alpha_composite(p2, (930, 150)); bb.alpha_composite(p1, (740, 90))
-for i, ic in enumerate(['img/nudge-icon.png', 'img/benefit-icon.png']):
+for i, ic in enumerate(['img/nudge-icon.png', 'img/blare-icon.png', 'img/benefit-icon.png']):
     im = Image.open(ic).convert('RGBA').resize((60, 60), Image.LANCZOS); bb.alpha_composite(rounded(im, 14), (84 + i * 76, 544))
 bb.convert('RGB').save('img/banner.png', optimize=True)
 print('assets ok')

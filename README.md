@@ -6,6 +6,7 @@
   <a href="https://azamoviich.github.io/afterhours"><b>Website</b></a> ·
   <a href="#install">Install</a> ·
   <a href="#nudge">Nudge</a> ·
+  <a href="#blare">Blare</a> ·
   <a href="#benefit-motors">Benefit Motors</a> ·
   <a href="#faq">FAQ</a>
 </p>
@@ -64,6 +65,26 @@ Or open **[azamoviich.github.io/afterhours](https://azamoviich.github.io/afterho
 | 🧩 **Widgets** | Home screen (tick tasks right on the widget) and lock screen |
 
 <p align="center"><img src="img/widgets.jpg" alt="Nudge widgets" width="380"></p>
+
+---
+
+<a id="blare"></a>
+
+## <img src="img/blare-icon.png" width="36" align="top"> Blare
+
+**A loud alarm that actually wakes you.** The stock alarm kept failing me, so I made one that's brutal on purpose.
+
+<p align="center"><img src="img/blare-strip.jpg" alt="Blare screenshots" width="100%"></p>
+
+| | |
+|---|---|
+| 🚨 **Real system alarms** | Built on AlarmKit: rings through Silent mode and Focus, full screen on the lock screen, even with the app closed |
+| 🔊 **5 brutal sounds** | Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Synthesized at near full scale, tuned to the 2–4 kHz range ears hate most |
+| 🧮 **Wake-up missions** | Solve 3 math problems, shake 40 times, or type a sentence to turn it off |
+| 🔒 **No escape** | Hit Stop on the lock screen without finishing the mission and it rings again every minute |
+| 🔦 **Full assault mode** | Tap "I'm up": volume to 100%, flashlight strobe, red flashing screen, nonstop haptics |
+
+> Your phone's volume is still the ceiling. Turn Ringtone and Alerts volume all the way up.
 
 ---
 
