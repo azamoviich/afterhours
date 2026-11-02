@@ -19,7 +19,7 @@ apps = [
          appPermissions=dict(entitlements=[], privacy={})),
     dict(name="Blare", bundleIdentifier="uz.plagueson.blare", developerName="Plagueson",
          subtitle="A loud alarm that actually wakes you.",
-         localizedDescription="Real system alarms (AlarmKit) that ring through Silent and Focus, with 5 brutally loud sounds. "
+         localizedDescription="Real system alarms (AlarmKit) that ring through Silent and Focus, with 5 very loud sounds. "
                               "Wake-up missions (math, shake, type) and No Escape mode: hit Stop without finishing and it rings again every minute. "
                               "Just a demo app I made in my free time.",
          iconURL=f"{BASE}/img/blare-icon.png", tintColor="FF3B1F", category="utilities",

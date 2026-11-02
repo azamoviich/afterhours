@@ -91,7 +91,7 @@ h2 { font: 600 clamp(40px, 6vw, 68px)/1 var(--serif); letter-spacing: -.03em; }
 .cell { grid-column: span 2; background: var(--faint); border-radius: 30px; padding: 6px; }
 .cell > div { height: 100%; background: var(--card); border-radius: 24px; padding: 26px; box-shadow: inset 0 1px 0 rgba(255,255,255,.4); }
 .cell.wide { grid-column: span 4; } .cell.tall { grid-row: span 2; }
-.cell h3 { font: 600 22px/1.2 var(--serif); margin: 14px 0 6px; letter-spacing: -.01em; }
+.cell h3 { font: 600 22px/1.2 var(--serif); margin: 0 0 6px; letter-spacing: -.01em; }
 .cell p { color: var(--mut); font-size: 15px; }
 .cell .ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,90,54,.12); font-size: 19px; }
 code.k { font: 14px ui-monospace, "SF Mono", monospace; background: var(--faint); padding: 3px 8px; border-radius: 8px; display: inline-block; margin-top: 12px; }
@@ -187,23 +187,23 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
   <div class="wrap">
     <div class="app-head r"><img src="img/nudge-icon.png" alt=""><span class="eyebrow">Productivity</span></div>
     <h2 class="r">Nudge</h2>
-    <p class="tag r">A to-do app for people who forget. I kept dropping things, so I built one that keeps reminding me until they're done.</p>
+    <p class="tag r">A to-do app for people who forget. I kept forgetting things, so this one keeps reminding me until they're done.</p>
     <div class="reel r">
       <img src="img/frames/nudge-1.png" alt="Today"><img src="img/frames/nudge-2.png" alt="Quick add">
       <img src="img/frames/nudge-3.png" alt="Upcoming"><img src="img/frames/nudge-4.png" alt="Dark mode">
     </div>
     <div class="bento">
-      <div class="cell wide r"><div><span class="ico">✍️</span><h3>Type like you think</h3>
+      <div class="cell wide r"><div><h3>Type like you think</h3>
         <p>Dates, times, lists and priority are picked up as you type, and you see what it understood before you save.</p>
         <code class="k">call mom tomorrow 6pm #personal !!</code>
         <div class="chips"><span style="background:#ff5a36;color:#fff">Tomorrow 6:00 PM</span><span style="background:rgba(92,133,250,.15);color:#5c85fa">Personal</span><span style="background:rgba(250,168,51,.15);color:#d4891f">Medium</span></div></div></div>
-      <div class="cell tall r"><div><span class="ico">🧩</span><h3>Widgets</h3><p>Tick tasks right on the home screen. Lock screen too.</p>
+      <div class="cell tall r"><div><h3>Widgets</h3><p>Tick tasks right on the home screen. Lock screen too.</p>
         <img class="widgets-img" src="img/widgets.jpg" alt="Nudge widgets"></div></div>
-      <div class="cell r"><div><span class="ico">🔔</span><h3>Nag mode</h3><p>Re-reminds at 10, 30, 60 and 120 minutes until you tick it.</p></div></div>
-      <div class="cell r"><div><span class="ico">🧠</span><h3>Brain dump</h3><p>Paste a messy list. Every line becomes a task.</p></div></div>
-      <div class="cell r"><div><span class="ico">☀️</span><h3>Morning digest</h3><p>8:30 summary of what today holds.</p></div></div>
-      <div class="cell r"><div><span class="ico">⚡</span><h3>Act from the alert</h3><p>Done, in 1 hour, or tomorrow, without opening the app.</p></div></div>
-      <div class="cell wide r"><div><span class="ico">🔁</span><h3>Repeats that don't pile up</h3><p>Write <code class="k" style="margin:0">daily</code>, <code class="k" style="margin:0">weekdays</code> or <code class="k" style="margin:0">monthly</code>. Tick it and it rolls to the next day, even if you skipped a few.</p></div></div>
+      <div class="cell r"><div><h3>Nag mode</h3><p>Re-reminds at 10, 30, 60 and 120 minutes until you tick it.</p></div></div>
+      <div class="cell r"><div><h3>Brain dump</h3><p>Paste a messy list. Every line becomes a task.</p></div></div>
+      <div class="cell r"><div><h3>Morning digest</h3><p>8:30 summary of what today holds.</p></div></div>
+      <div class="cell r"><div><h3>Act from the alert</h3><p>Done, in 1 hour, or tomorrow, without opening the app.</p></div></div>
+      <div class="cell wide r"><div><h3>Repeats that don't pile up</h3><p>Write <code class="k" style="margin:0">daily</code>, <code class="k" style="margin:0">weekdays</code> or <code class="k" style="margin:0">monthly</code>. Tick it and it rolls to the next day, even if you skipped a few.</p></div></div>
     </div>
   </div>
 </section>
@@ -212,17 +212,17 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
   <div class="wrap">
     <div class="app-head r"><img src="img/blare-icon.png" alt=""><span class="eyebrow" style="background:rgba(255,59,31,.15);color:#ff3b1f"><i style="background:#ff3b1f"></i>Alarm</span></div>
     <h2 class="r blare-title">BLARE</h2>
-    <p class="tag r">A loud alarm that actually wakes you. The stock alarm kept failing me, so this one is brutal on purpose.</p>
+    <p class="tag r">A loud alarm that actually wakes you. The stock alarm kept failing me, so this one is hard to ignore.</p>
     <div class="reel r">
       <img src="img/frames/blare-1.png" alt="Alarms"><img src="img/frames/blare-2.png" alt="Edit alarm">
       <img src="img/frames/blare-3.png" alt="Math mission"><img src="img/frames/blare-4.png" alt="Shake mission">
     </div>
     <div class="bento">
-      <div class="cell wide r"><div><span class="ico">🚨</span><h3>Real system alarms</h3><p>Built on Apple's AlarmKit. Rings through Silent mode and Focus, full screen on the lock screen, even when the app is closed.</p></div></div>
-      <div class="cell r"><div><span class="ico">🔊</span><h3>5 brutal sounds</h3><p>Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Tuned to 2–4 kHz.</p></div></div>
-      <div class="cell r"><div><span class="ico">🧮</span><h3>Missions</h3><p>Math, shake 40 times, or type a sentence to turn it off.</p></div></div>
-      <div class="cell r"><div><span class="ico">🔒</span><h3>No escape</h3><p>Stop it without the mission and it rings again every minute.</p></div></div>
-      <div class="cell r"><div><span class="ico">🔦</span><h3>Full assault</h3><p>Volume to 100%, flashlight strobe, red screen, nonstop haptics.</p></div></div>
+      <div class="cell wide r"><div><h3>Real system alarms</h3><p>Built on Apple's AlarmKit. Rings through Silent mode and Focus, full screen on the lock screen, even when the app is closed.</p></div></div>
+      <div class="cell r"><div><h3>5 loud sounds</h3><p>Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Tuned to 2–4 kHz.</p></div></div>
+      <div class="cell r"><div><h3>Missions</h3><p>Math, shake 40 times, or type a sentence to turn it off.</p></div></div>
+      <div class="cell r"><div><h3>No escape</h3><p>Stop it without the mission and it rings again every minute.</p></div></div>
+      <div class="cell r"><div><h3>In-app ringing</h3><p>Volume to 100%, flashlight strobe, red screen, nonstop haptics.</p></div></div>
     </div>
   </div>
 </section>
@@ -231,15 +231,15 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
   <div class="wrap wide-type">
     <div class="app-head r"><img src="img/benefit-icon.png" alt=""><span class="eyebrow" style="background:rgba(255,255,255,.08);color:#fff"><i style="background:#fff"></i>Concept</span></div>
     <h2 class="r">Benefit Motors</h2>
-    <p class="tag r">What a premium car dealership app could feel like. OLED black, Liquid Glass, spring physics and haptics everywhere.</p>
+    <p class="tag r">A design exercise: what a premium car dealership app could feel like.</p>
     <div class="reel r">
       <img src="img/frames/benefit-1.png" alt="Showroom"><img src="img/frames/benefit-2.png" alt="Car page">
       <img src="img/frames/benefit-3.png" alt="Inventory"><img src="img/frames/benefit-4.png" alt="Sell">
     </div>
     <div class="bento">
-      <div class="cell r"><div><span class="ico">🏁</span><h3>Showroom</h3><p>Featured carousel, body types, brands, price drops.</p></div></div>
-      <div class="cell r"><div><span class="ico">🧮</span><h3>Live financing</h3><p>Drag the down payment, pick a term, watch the monthly update.</p></div></div>
-      <div class="cell r"><div><span class="ico">📅</span><h3>Test drives</h3><p>Pick a day and slot, get a confirmation with a haptic tap.</p></div></div>
+      <div class="cell r"><div><h3>Showroom</h3><p>Featured carousel, body types, brands, price drops.</p></div></div>
+      <div class="cell r"><div><h3>Live financing</h3><p>Drag the down payment, pick a term, watch the monthly update.</p></div></div>
+      <div class="cell r"><div><h3>Test drives</h3><p>Pick a day and a time slot, get a confirmation.</p></div></div>
     </div>
     <p class="note r">Demo only. Not a real store; every car, price and person in it is made up.</p>
   </div>
@@ -269,7 +269,7 @@ footer .big { font: 600 clamp(56px, 12vw, 160px)/1 var(--serif); letter-spacing:
 
 <footer>
   <div class="big">afterhours</div>
-  <p>Made after hours in Tashkent 🇺🇿 · <a href="https://github.com/azamoviich/afterhours">GitHub</a></p>
+  <p>Tashkent, 2026 · <a href="https://github.com/azamoviich/afterhours">GitHub</a></p>
 </footer>
 
 <script>
@@ -278,7 +278,7 @@ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll('.r').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
 const c = document.getElementById('copy');
 c.addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(c.textContent.trim()); const t = c.textContent; c.textContent = 'Copied ✓'; setTimeout(() => c.textContent = t, 1400); } catch {}
+  try { await navigator.clipboard.writeText(c.textContent.trim()); const t = c.textContent; c.textContent = 'Copied '; setTimeout(() => c.textContent = t, 1400); } catch {}
 });
 </script>
 </body>

@@ -11,13 +11,6 @@
   <a href="#faq">FAQ</a>
 </p>
 
-<p align="center">
-  <img alt="iOS 26+" src="https://img.shields.io/badge/iOS-26%2B-1a1714?style=flat-square&logo=apple&logoColor=white">
-  <img alt="SwiftUI" src="https://img.shields.io/badge/SwiftUI-native-ff5a36?style=flat-square&logo=swift&logoColor=white">
-  <img alt="SideStore" src="https://img.shields.io/badge/SideStore-source-f6f3ee?style=flat-square&labelColor=1a1714">
-  <img alt="Free" src="https://img.shields.io/badge/price-free-3db87f?style=flat-square">
-</p>
-
 ---
 
 Little iOS apps I make in my free time. Native SwiftUI, no accounts, no tracking, nothing to buy. They're demos and experiments, not companies, so expect rough edges and frequent updates.
@@ -50,19 +43,19 @@ Or open **[azamoviich.github.io/afterhours](https://azamoviich.github.io/afterho
 
 ## <img src="img/nudge-icon.png" width="36" align="top"> Nudge
 
-**A to-do app for people who forget.** Built for my own brain: I kept forgetting things, so this one keeps reminding me until they're done.
+**A to-do app for people who forget.** I kept forgetting things, so this one keeps reminding me until they're done.
 
 <p align="center"><img src="img/nudge-strip.jpg" alt="Nudge screenshots" width="100%"></p>
 
 | | |
 |---|---|
-| ✍️ **Type like you think** | `call mom tomorrow 6pm #personal !!` → date, time, list and priority, picked up as you type |
-| 🧠 **Brain dump** | Paste a messy list. Every line becomes a task. |
-| 🔔 **Nag mode** | Re-reminds at +10 min, 30 min, 1 h and 2 h until you tick it |
-| ⚡ **Act from the notification** | Done · Remind me in 1 hour · Tomorrow morning |
-| ☀️ **Morning digest** | 8:30 summary of what's due today |
-| 🔁 **Repeats** | `daily`, `weekdays`, `weekly`, `monthly` |
-| 🧩 **Widgets** | Home screen (tick tasks right on the widget) and lock screen |
+| **Type like you think** | `call mom tomorrow 6pm #personal !!` → date, time, list and priority, picked up as you type |
+| **Brain dump** | Paste a messy list. Every line becomes a task. |
+| **Nag mode** | Re-reminds at +10 min, 30 min, 1 h and 2 h until you tick it |
+| **Act from the notification** | Done · Remind me in 1 hour · Tomorrow morning |
+| **Morning digest** | 8:30 summary of what's due today |
+| **Repeats** | `daily`, `weekdays`, `weekly`, `monthly` |
+| **Widgets** | Home screen (tick tasks right on the widget) and lock screen |
 
 <p align="center"><img src="img/widgets.jpg" alt="Nudge widgets" width="380"></p>
 
@@ -72,17 +65,17 @@ Or open **[azamoviich.github.io/afterhours](https://azamoviich.github.io/afterho
 
 ## <img src="img/blare-icon.png" width="36" align="top"> Blare
 
-**A loud alarm that actually wakes you.** The stock alarm kept failing me, so I made one that's brutal on purpose.
+**A loud alarm that actually wakes you.** The stock alarm kept failing me, so I made one that's hard to ignore.
 
 <p align="center"><img src="img/blare-strip.jpg" alt="Blare screenshots" width="100%"></p>
 
 | | |
 |---|---|
-| 🚨 **Real system alarms** | Built on AlarmKit: rings through Silent mode and Focus, full screen on the lock screen, even with the app closed |
-| 🔊 **5 brutal sounds** | Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Synthesized at near full scale, tuned to the 2–4 kHz range ears hate most |
-| 🧮 **Wake-up missions** | Solve 3 math problems, shake 40 times, or type a sentence to turn it off |
-| 🔒 **No escape** | Hit Stop on the lock screen without finishing the mission and it rings again every minute |
-| 🔦 **Full assault mode** | Tap "I'm up": volume to 100%, flashlight strobe, red flashing screen, nonstop haptics |
+| **Real system alarms** | Built on AlarmKit: rings through Silent mode and Focus, full screen on the lock screen, even with the app closed |
+| **5 loud sounds** | Nuclear, Air Raid, Chaos, Smoke Detector, Klaxon. Synthesized at near full scale, tuned to the 2–4 kHz range ears are most sensitive to |
+| **Wake-up missions** | Solve 3 math problems, shake 40 times, or type a sentence to turn it off |
+| **No escape** | Hit Stop on the lock screen without finishing the mission and it rings again every minute |
+| **In-app ringing** | Tap "I'm up": volume to 100%, flashlight strobe, red flashing screen, nonstop haptics |
 
 > Your phone's volume is still the ceiling. Turn Ringtone and Alerts volume all the way up.
 
@@ -92,7 +85,7 @@ Or open **[azamoviich.github.io/afterhours](https://azamoviich.github.io/afterho
 
 ## <img src="img/benefit-icon.png" width="36" align="top"> Benefit Motors
 
-**A concept car dealership app.** A design exercise in what a premium dealership app could feel like: OLED black, Liquid Glass, spring physics, haptics everywhere.
+**A concept car dealership app.** A design exercise: what a premium dealership app could feel like.
 
 <p align="center"><img src="img/benefit-strip.jpg" alt="Benefit Motors screenshots" width="100%"></p>
 
@@ -135,4 +128,4 @@ The apps run fully on your phone: no accounts, no analytics, no tracking. SideSt
 
 ---
 
-<p align="center"><sub>Made after hours in Tashkent 🇺🇿</sub></p>
+<p align="center"><sub>Tashkent, 2026</sub></p>
