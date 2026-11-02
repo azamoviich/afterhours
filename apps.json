@@ -22,12 +22,12 @@
       ],
       "versions": [
         {
-          "version": "1.0",
-          "buildVersion": "1",
+          "version": "1.0.1",
+          "buildVersion": "2",
           "date": "2026-11-02",
-          "localizedDescription": "First release.",
+          "localizedDescription": "Typed dates always win, repeating tasks start today, Inbox renamed to Someday.",
           "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/Nudge.ipa",
-          "size": 364223,
+          "size": 367466,
           "minOSVersion": "26.0"
         }
       ],
