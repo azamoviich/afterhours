@@ -1,0 +1,72 @@
+{
+  "name": "Plagueson Apps",
+  "identifier": "uz.plagueson.source",
+  "subtitle": "Apps by Plagueson",
+  "iconURL": "https://azamoviich.github.io/plagueson-apps/img/nudge-icon.png",
+  "tintColor": "FF5A36",
+  "apps": [
+    {
+      "name": "Nudge",
+      "bundleIdentifier": "uz.plagueson.nudge",
+      "developerName": "Plagueson",
+      "subtitle": "A demo to-do app for people who forget.",
+      "localizedDescription": "Type tasks like you think (\"call mom tomorrow 6pm #personal !!\"), brain-dump a whole list at once, and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.",
+      "iconURL": "https://azamoviich.github.io/plagueson-apps/img/nudge-icon.png",
+      "tintColor": "FF5A36",
+      "category": "productivity",
+      "screenshots": [
+        "https://azamoviich.github.io/plagueson-apps/img/nudge-1.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/nudge-2.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/nudge-3.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/nudge-4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-11-02",
+          "localizedDescription": "First release.",
+          "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/Nudge.ipa",
+          "size": 364223,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Benefit Motors",
+      "bundleIdentifier": "uz.benefitmotors.app",
+      "developerName": "Benefit Motors",
+      "subtitle": "Demo car dealership app.",
+      "localizedDescription": "Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.",
+      "iconURL": "https://azamoviich.github.io/plagueson-apps/img/benefit-icon.png",
+      "tintColor": "111111",
+      "category": "lifestyle",
+      "screenshots": [
+        "https://azamoviich.github.io/plagueson-apps/img/benefit-1.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/benefit-2.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/benefit-3.jpg",
+        "https://azamoviich.github.io/plagueson-apps/img/benefit-4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-11-02",
+          "localizedDescription": "Demo release.",
+          "downloadURL": "https://azamoviich.github.io/plagueson-apps/ipa/BenefitMotors.ipa",
+          "size": 8068458,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}

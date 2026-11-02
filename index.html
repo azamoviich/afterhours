@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plagueson Apps</title><style>
+:root{color-scheme:light dark;--bg:#f6f3ee;--card:#fff;--ink:#1a1714;--mut:#1a171480;--acc:#ff5a36}
+@media(prefers-color-scheme:dark){:root{--bg:#11100f;--card:#1c1b19;--ink:#f2efea;--mut:#f2efea80}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,system-ui,sans-serif}
+main{max-width:880px;margin:auto;padding:56px 20px 80px}
+h1{font:600 44px/1.05 ui-serif,Georgia,serif;letter-spacing:-.02em;margin:0 0 10px}
+.lead{color:var(--mut);margin:0 0 26px;max-width:520px}
+.cta{display:inline-flex;gap:10px;align-items:center;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:999px}
+.cta:active{transform:scale(.97)}
+.url{display:block;margin-top:12px;font:13px ui-monospace,monospace;color:var(--mut);word-break:break-all}
+.app{background:var(--card);border-radius:28px;padding:22px;margin-top:28px;border:1px solid #8881}
+.app header{display:flex;gap:14px;align-items:center}.app h2{margin:0;font-size:20px}.app header p{margin:0;color:var(--mut);font-size:14px}
+.icon{width:64px;height:64px;border-radius:15px}
+.dl{margin-left:auto;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;background:#8882}
+.desc{color:var(--mut);font-size:15px}
+.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.shots img{height:420px;border-radius:22px;scroll-snap-align:start;border:1px solid #8882}
+footer{margin-top:40px;color:var(--mut);font-size:13px}
+</style></head><body><main>
+<h1>Plagueson Apps</h1>
+<p class="lead">Little demo apps I make in my free time. Install with SideStore using your own Apple ID.</p>
+<a class="cta" href="sidestore://source?url=https://azamoviich.github.io/plagueson-apps/apps.json">Add to SideStore ↗</a>
+<span class="url">https://azamoviich.github.io/plagueson-apps/apps.json</span>
+<section class="app">
+  <header><img class="icon" src="img/nudge-icon.png"><div><h2>Nudge</h2><p>A demo to-do app for people who forget.</p></div>
+  <a class="dl" href="ipa/Nudge.ipa">IPA</a></header>
+  <p class="desc">Type tasks like you think ("call mom tomorrow 6pm #personal !!"), brain-dump a whole list at once, and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.</p>
+  <div class="shots"><img src="img/nudge-1.jpg" loading="lazy"><img src="img/nudge-2.jpg" loading="lazy"><img src="img/nudge-3.jpg" loading="lazy"><img src="img/nudge-4.jpg" loading="lazy"></div></section><section class="app">
+  <header><img class="icon" src="img/benefit-icon.png"><div><h2>Benefit Motors</h2><p>Demo car dealership app.</p></div>
+  <a class="dl" href="ipa/BenefitMotors.ipa">IPA</a></header>
+  <p class="desc">Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.</p>
+  <div class="shots"><img src="img/benefit-1.jpg" loading="lazy"><img src="img/benefit-2.jpg" loading="lazy"><img src="img/benefit-3.jpg" loading="lazy"><img src="img/benefit-4.jpg" loading="lazy"></div></section>
+<footer>New to SideStore? Setup guide: <a href="https://github.com/azamoviich/plagueson-apps#readme">README</a> · Free Apple IDs: 3 apps max, refresh every 7 days.</footer>
+</main></body></html>

@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Regenerates apps.json (AltStore/SideStore source format).
+Usage: python3 build_source.py https://<user>.github.io/<repo>"""
+import json, os, sys, datetime
+BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://REPLACE_ME").rstrip("/")
+here = os.path.dirname(os.path.abspath(__file__))
+today = datetime.date.today().isoformat()
+size = lambda f: os.path.getsize(os.path.join(here, "ipa", f))
+
+apps = [
+    dict(name="Nudge", bundleIdentifier="uz.plagueson.nudge", developerName="Plagueson",
+         subtitle="A demo to-do app for people who forget.",
+         localizedDescription="Type tasks like you think (\"call mom tomorrow 6pm #personal !!\"), brain-dump a whole list at once, "
+                              "and get nagged until it's done. Morning digest, snooze from the notification, repeating tasks. Just a demo app I made in my free time.",
+         iconURL=f"{BASE}/img/nudge-icon.png", tintColor="FF5A36", category="productivity", screenshots=[f"{BASE}/img/nudge-{i}.jpg" for i in (1, 2, 3, 4)],
+         versions=[dict(version="1.0", buildVersion="1", date=today, localizedDescription="First release.",
+                        downloadURL=f"{BASE}/ipa/Nudge.ipa", size=size("Nudge.ipa"), minOSVersion="26.0")],
+         appPermissions=dict(entitlements=[], privacy={})),
+    dict(name="Benefit Motors", bundleIdentifier="uz.benefitmotors.app", developerName="Benefit Motors",
+         subtitle="Demo car dealership app.",
+         localizedDescription="Browse inventory, calculate financing, book a test drive and get a trade-in estimate. Just a demo app I made in my free time — not a real store, all cars and prices are made up.",
+         iconURL=f"{BASE}/img/benefit-icon.png", tintColor="111111", category="lifestyle",
+         screenshots=[f"{BASE}/img/benefit-{i}.jpg" for i in (1, 2, 3, 4)],
+         versions=[dict(version="1.0", buildVersion="1", date=today, localizedDescription="Demo release.",
+                        downloadURL=f"{BASE}/ipa/BenefitMotors.ipa", size=size("BenefitMotors.ipa"), minOSVersion="26.0")],
+         appPermissions=dict(entitlements=[], privacy={})),
+]
+source = dict(name="Plagueson Apps", identifier="uz.plagueson.source", subtitle="Apps by Plagueson",
+              iconURL=f"{BASE}/img/nudge-icon.png", tintColor="FF5A36", apps=apps, news=[])
+json.dump(source, open(os.path.join(here, "apps.json"), "w"), indent=2, ensure_ascii=False)
+print(f"apps.json written for {BASE}")
