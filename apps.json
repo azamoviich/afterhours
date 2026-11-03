@@ -27,7 +27,7 @@
         {
           "version": "1.1.1",
           "buildVersion": "4",
-          "date": "2026-11-02",
+          "date": "2026-11-03",
           "localizedDescription": "Fixes tab labels wrapping on smaller iPhones. Includes home and lock screen widgets (the widget uses 1 extra App ID on free accounts).",
           "downloadURL": "https://azamoviich.github.io/afterhours/ipa/Nudge.ipa",
           "size": 485320,
@@ -56,12 +56,12 @@
       ],
       "versions": [
         {
-          "version": "1.0",
-          "buildVersion": "1",
-          "date": "2026-11-02",
-          "localizedDescription": "First release.",
+          "version": "1.0.1",
+          "buildVersion": "2",
+          "date": "2026-11-03",
+          "localizedDescription": "Fixes the Allow alarms button doing nothing.",
           "downloadURL": "https://azamoviich.github.io/afterhours/ipa/Blare.ipa",
-          "size": 7120385,
+          "size": 7121158,
           "minOSVersion": "26.0"
         }
       ],
@@ -92,7 +92,7 @@
         {
           "version": "1.0",
           "buildVersion": "1",
-          "date": "2026-11-02",
+          "date": "2026-11-03",
           "localizedDescription": "Demo release.",
           "downloadURL": "https://azamoviich.github.io/afterhours/ipa/BenefitMotors.ipa",
           "size": 8068458,

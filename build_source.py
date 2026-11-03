@@ -24,7 +24,7 @@ apps = [
                               "Just a demo app I made in my free time.",
          iconURL=f"{BASE}/img/blare-icon.png", tintColor="FF3B1F", category="utilities",
          screenshots=[f"{BASE}/img/blare-{i}.jpg" for i in (1, 2, 3, 4)],
-         versions=[dict(version="1.0", buildVersion="1", date=today, localizedDescription="First release.",
+         versions=[dict(version="1.0.1", buildVersion="2", date=today, localizedDescription="Fixes the Allow alarms button doing nothing.",
                         downloadURL=f"{BASE}/ipa/Blare.ipa", size=size("Blare.ipa"), minOSVersion="26.0")],
          appPermissions=dict(entitlements=[], privacy={"NSAlarmKitUsageDescription": "Schedules real alarms that ring on silent.",
                                                       "NSMotionUsageDescription": "Counts shakes for the shake mission."})),
